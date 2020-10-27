@@ -2,14 +2,16 @@
 
 Website punya saya.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7a112929-0a74-4e56-aad2-4daabf59c915/deploy-status)](https://app.netlify.com/sites/sayaandry/deploys)
+
 ## Setup
 
-|                |                        |
-| -------------- | ---------------------- |
-| Alamat         | https://sayaandry.com/ |
-| SSL            | CloudFlare             |
-| SSG            | Hugo v0.76.5           |
-| Tempat Hosting | Netlify                |
-| Tanggal Buat   | 2020-10-28             |
+| Type            | Value                  |
+| --------------- | ---------------------- |
+| Address         | https://sayaandry.com/ |
+| SSL Certificate | CloudFlare             |
+| Framework       | Hugo v0.76.5           |
+| Hosting         | Netlify                |
+| Date Created    | 2020-10-28             |
 
-Made with ❤ in Bandung.
+Made with ❤ by Andry Setiawan in Bandung.
