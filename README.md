@@ -14,4 +14,8 @@ Website punya saya.
 | Hosting         | Netlify                |
 | Date Created    | 2020-10-28             |
 
+## Todos
+
+- [ ] add google analytics
+
 Made with ❤ by Andry Setiawan in Bandung.
