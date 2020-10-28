@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /categories
+Disallow: /categories/*
+Disallow: /tags
+Disallow: /tags/*
+Allow: /
+
+Sitemap: https://sayaandry.com/sitemap.xml

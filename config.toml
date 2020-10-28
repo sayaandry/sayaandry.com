@@ -14,7 +14,6 @@ artikel = "/artikel/:slug/"
   author = "authors"
 
 [params]
-  description = "Hello World!."
   contentBackgroundColor = "#fff"
   contentTextColor = "#212529"
   contentLinkColor = "#007bff"
