@@ -4,17 +4,40 @@
   
   {{ hugo.Generator }}
 
-  {{ with .Params.description }}
-  <meta name="description" content="{{ . }}">
-  <meta itemprop="description" content="{{ . }}" />
-  <meta property="og:description" content="{{ . }}" />
-  <meta name="twitter:description" content="{{ . }}" />
+  <link rel="canonical" href="{{ .Permalink }}" />
+  
+  {{ if .IsHome }}
+  <meta name="description" content="{{ .Site.Params.description }}"/>
+  <meta itemprop="description" content="{{ .Site.Params.description }}" />
+  <meta property="og:description" content="{{ .Site.Params.description }}" />
+  <meta name="twitter:description" content="{{ .Site.Params.description }}" /> 
+  {{ else if .Params.description }}
+  <meta name="description" content="{{ .Description }}">
+  <meta itemprop="description" content="{{ .Description }}" />
+  <meta property="og:description" content="{{ .Description }}" />
+  <meta name="twitter:description" content="{{ .Description }}" /> 
   {{ else }}
-  <meta name="description" content="Websitenya tukang ngoprek.">
   {{ end }}
 
+  {{ with.Params.author }}
+  <meta property="og:article:author" content="{{humanize . }}" />
+  <meta property="article:author" content="{{humanize . }}" />
+  <meta name="author" content="{{humanize . }}" />
+  {{ end }}
+
+  {{ with.Params.categories }}
+  <meta name="news_keywords" content="{{ index . 0 }}" />
+  <meta property="article:section" content="{{ index . 0 }}" />
+  {{ end }}
+
+  {{ if .IsHome }}
   <meta name="robots" content="index,follow" /> 
   <meta name="googlebot" content="index,follow" />
+  {{ else if .IsPage }}
+  <meta name="robots" content="index,follow" /> 
+  <meta name="googlebot" content="index,follow" />
+  {{ else }}
+  {{ end }}
 
   {{ $appleTouchIcon := "apple-touch-icon.png" }}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ $appleTouchIcon | absURL }}">
@@ -45,7 +68,7 @@
       {{ $homepage = .Name }}
     {{ end }}
   {{ end }}
-  <title>{{ $homepage }} - {{ .Site.Title }}</title>
+  <title>{{ .Site.Title }}</title>
   {{ else }}
   <title>{{ .Title }} - {{ .Site.Title }}</title>
   {{ end }}

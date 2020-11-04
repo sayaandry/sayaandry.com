@@ -1,14 +1,8 @@
 {{- define "main" -}}
 
-{{ $homepage := "Home" }}
-{{ with .Site.Menus.nav }}
-  {{ range first 1 . }}
-    {{ $homepage = .Name }}
-  {{ end }}
-{{ end }}
-<h1>Selamat datang.</h1>
+<h1>{{ .Title }}</h1>
 
-{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ $pages := .Pages }}
 {{ range $pages.ByPublishDate.Reverse }}
   <p>
     <a href="{{ .Permalink }}">{{ .Title }}</a>
