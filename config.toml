@@ -6,7 +6,6 @@ theme = "minimal-bootstrap-hugo-theme"
 paginate = "7"
 
 [permalinks]
-Artikel = "/artikel/:slug/"
 kategori = "/:slug/"
 topik = "/topik/:slug/"
 
