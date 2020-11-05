@@ -6,13 +6,14 @@ theme = "minimal-bootstrap-hugo-theme"
 paginate = "7"
 
 [permalinks]
-Artikel = "/artikel/:slug/"
-categories = "/:slug/"
+artikel = "/artikel/:slug/"
+kategori = "/:slug/"
+topik = "/topik/:slug/"
 
-[indexes]
-  category = "categories"
-  tag = "tags"
-  author = "authors"
+[taxonomies]
+  category = "kategori"
+  tag = "topik"
+  series = "seri"
 
 [params]
   description = "Websitenya tukang ngoprek."

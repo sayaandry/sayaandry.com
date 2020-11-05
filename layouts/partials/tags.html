@@ -1,0 +1,4 @@
+{{ range .Params.topik }}
+{{ $href := print (absURL "topik/") (urlize .) }}
+<small><code><a href="{{ $href }}">{{ . }}</a></code></small>
+{{ end }}
