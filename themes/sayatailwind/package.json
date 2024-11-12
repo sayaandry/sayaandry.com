@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tailwind": "npx tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css",
+    "hugo": "hugo server -D -s exampleSite --themesDir=../.. --disableFastRender --gc",
+    "build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css -m"
   },
   "keywords": [],
   "author": "",
