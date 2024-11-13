@@ -2,7 +2,7 @@
 title = 'Post 7'
 date = 2023-01-01T17:00:00-07:00
 draft = true
-tags = ['blue']
+tags = ['red','green','blue']
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo tortor non metus faucibus blandit. Nullam sed mattis massa. Curabitur ullamcorper consectetur lectus, id cursus purus posuere ac. Etiam sollicitudin sem non urna tempus, in tempor nisl sodales. Donec feugiat tempus eleifend. Fusce consectetur quis lorem ut luctus. Fusce pellentesque ultrices nisi bibendum vestibulum. Proin ut tortor metus. Fusce fringilla finibus justo, condimentum pellentesque felis iaculis id. Integer varius lectus eu nisi volutpat aliquet.
