@@ -1,1 +1,8 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+<div class="flex flex-wrap justify-center text-center">
+    <p>
+        © {{ now.Year }} <a class="hover:text-sky-500" href="/">{{ site.Title }}</a>
+        <br class="md:hidden">
+        <span class="hidden md:inline">·</span>
+        Made with ❤️ using <a class="hover:text-sky-500" href="https://gohugo.io/" target="_blank" rel="noopener">Hugo {{ hugo.Version }}</a>
+    </p>
+</div>
