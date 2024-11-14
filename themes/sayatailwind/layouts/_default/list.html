@@ -1,8 +1,15 @@
 {{ define "main" }}
-  <h1 class="font-bold text-4xl text-sky-500">{{ .Title }}</h1>
+  <div class="p-4">
+  <h1 class="font-bold text-4xl text-sky-500 mb-4">{{ .Title }}</h1>
   {{ .Content }}
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto my-4">
   {{ range .Pages }}
-    <h2 class="font-bold text-2xl text-sky-500"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+  <div class="bg-white shadow-md p-4">
+    <img src="/img/img-640-480.png" width="100%">
+    <h2 class="font-bold text-xl text-sky-500 mt-2"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ partial "terms.html" . }}
+  </div>
   {{ end }}
+  </div>
 {{ end }}
