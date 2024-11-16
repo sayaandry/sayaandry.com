@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  a:hover {
+    @apply text-sky-500;
+  }
+}
+
 .prose {
-    color: var(--tw-prose-body);
-    max-width: 700px;
+  color: var(--tw-prose-body);
+  max-width: 100%;
   }
