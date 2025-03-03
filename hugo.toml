@@ -2,3 +2,27 @@ baseURL = 'https://sayaandry.com/'
 languageCode = 'id-ID'
 title = 'sayaandry.com'
 theme = 'sayatailwind'
+# googleAnalytics = "XXX"
+disqusShortname = "sayaandry"
+
+[Params.Author]
+name = "Andry Setiawan"
+
+[permalinks]
+categories = ":slug"
+blog = "/:year/:month/:slug/"
+
+[[menus.main]]
+name = 'Home'
+url = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Blog'
+url = '/blog'
+weight = 20
+
+[[menus.main]]
+name = 'About'
+url = '/about'
+weight = 30

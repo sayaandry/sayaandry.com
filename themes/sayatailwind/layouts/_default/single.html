@@ -1,25 +1,34 @@
 {{ define "main" }}
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto my-4">
-  <article class="md:col-span-2 prose lg:prose-lg bg-white shadow-md">
-    <div class="p-4">
+  <div class="md:col-span-2 prose lg:prose-lg bg-white shadow-md p-4">
+  <article class="article">
     <header class="not-prose border-b">
+      {{ if .Params.featured_image }}
+        {{ with .Resources.GetMatch .Params.featured_image }}
+        <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" class="mb-4" width="100%">
+        {{ end }}
+      {{ end }}
       <h1 class="text-4xl font-bold text-sky-500">{{ .Title }}</h1>
-      Andry Setiawan •
+      {{ .Site.Params.Author.name }} •
       {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := .Date | time.Format ":date_long" }}
+      {{ $dateHuman := .Date | time.Format "2 January 2006" }}
       <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
       {{ partial "terms.html" . }}
     </header>
     <div id="content" class="mb-8">
       {{ .Content }}
     </div>
+    <div class="py-4">
+      <h3 class="text-2xl font-bold text-sky-500">Komentar</h1>
+      {{ template "_internal/disqus.html" . }}
     </div>
   </article>
+  </div>
 
   <aside class="md:col-span-1 mx-4 md:mx-0">
     <div class="shadow-md bg-white">
       <h2 class="p-4 text-2xl font-bold border-b">📄 Artikel Terbaru</h2>
-      {{ range ( where .Site.RegularPages "Type" "posts" | first 5 ) }}
+      {{ range ( where .Site.RegularPages "Type" "blog" | first 5 ) }}
       <a href="{{ .Permalink }}" title="{{ .Title }}">
         <div class="p-4 hover:bg-slate-100">
           <h3 class="text-lg font-semibold">{{ .Title }}</h3>
@@ -30,7 +39,7 @@
     </div>
     <div class="sticky w-full top-20 mb-16 md:mb-0">
       <div class="mx-auto mt-8 flex">
-        <img src="/img/img-640-480.png" width="100%">
+		  {{ partial "ads.html" . }}
       </div>
     </div> 
   </aside>
