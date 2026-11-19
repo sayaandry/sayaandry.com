@@ -14,4 +14,5 @@ devDependencies {
 ```
 
 **todos**
-- [ ] edit `src/pages/index.astro`
+
+- [x] edit `src/pages/index.astro`
